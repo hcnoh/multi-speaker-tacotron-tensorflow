@@ -5,18 +5,17 @@ Multi-Speaker 기능을 가진 Tacotron 모델의 TensorFlow 구현입니다. �
 1. 파이썬 3.5 버전을 설치합니다.
 2. TensorFlow 1.10.0 버전 설치합니다. GPU가 사용가능하다면 GPU 버전을, 그렇지 않다면 CPU 버전을 설치합니다. 참고로 Generating을 수행하는 경우에는 CPU 버전으로도 충분합니다.
 3. 파이썬 패키지(Requirements)를 설치합니다. 설치는 아래와 같은 명령을 통해 수행 가능합니다.
-
   ```bash
   >>> pip install -r requirements.txt
   ```
 
-  아래와 같이 `virtualenv`를 활용하여 더 쉽게 패키지 관리를 할 수도 있습니다. `virtualenv`가 이미 설치되어 있다는 가정 하에 아래의 명령을 수행하면 됩니다.
+아래와 같이 `virtualenv`를 활용하여 더 쉽게 패키지 관리를 할 수도 있습니다. `virtualenv`가 이미 설치되어 있다는 가정 하에 아래의 명령을 수행하면 됩니다.
 
-  ```bash
-  >>> virtualenv --system-site-packages -p python3 tacotron-venv
-  >>> source ./tacotron-venv/bin/activate
-  >>> pip install -r requirements.txt
-  ```
+```bash
+>>> virtualenv --system-site-packages -p python3 tacotron-venv
+>>> source ./tacotron-venv/bin/activate
+>>> pip install -r requirements.txt
+```
 
 ## Training
 *Note: 데이터 세트를 다운로드받기 위한 여유분의 저장 공간이 필요합니다. LJ Speech 데이터 세트를 기준으로 약 80GB 이상의 저장 공간이 필요합니다.*
