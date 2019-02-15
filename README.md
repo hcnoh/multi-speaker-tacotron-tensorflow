@@ -2,12 +2,10 @@
 Multi-Speaker 기능을 가진 Tacotron 모델의 TensorFlow 구현입니다. 이 저장소는 Baidu의 Deep Voice 2 논문을 기반으로 구현하였습니다. Multi-Speaker 기능은 선택적으로 사용, 또는 사용하지 않을 수 있으며 만약 Multi-Speaker 기능을 사용하지 않는다면 기존의 Tacotron 모델과 동일합니다.
 
 ### Installing Dependencies
-
 1. 파이썬 3.5 버전을 설치합니다.
-
 2. TensorFlow 1.10.0 버전 설치합니다. GPU가 사용가능하다면 GPU 버전을, 그렇지 않다면 CPU 버전을 설치합니다. 참고로 Generating을 수행하는 경우에는 CPU 버전으로도 충분합니다.
-
 3. 파이썬 패키지(Requirements)를 설치합니다. 설치는 아래와 같은 명령을 통해 수행 가능합니다.
+
    ```
    >>> pip install -r requirements.txt
    ```
@@ -25,59 +23,59 @@ Multi-Speaker 기능을 가진 Tacotron 모델의 TensorFlow 구현입니다. �
 
 1. 음성 데이터 세트를 다운로드합니다.
 
-  이 저장소는 다음의 데이터 세트에 대한 활용을 제공합니다.
-  - [LJ Speech](https://keithito.com/LJ-Speech-Dataset/)
-  - [Korean Single Speaker Speech Dataset (KSS)](https://www.kaggle.com/bryanpark/korean-single-speaker-speech-dataset)
-  - [VCTK](https://homepages.inf.ed.ac.uk/jyamagis/page3/page58/page58.html)
+   이 저장소는 다음의 데이터 세트에 대한 활용을 제공합니다.
+   - [LJ Speech](https://keithito.com/LJ-Speech-Dataset/)
+   - [Korean Single Speaker Speech Dataset (KSS)](https://www.kaggle.com/bryanpark/korean-single-speaker-speech-dataset)
+   - [VCTK](https://homepages.inf.ed.ac.uk/jyamagis/page3/page58/page58.html)
 
 2. 데이터 세트를 원하는 위치에 Unpack합니다.
 
-  Unpacking 이후에는 디렉토리 구조가 다음과 같아야 합니다.
+   Unpacking 이후에는 디렉토리 구조가 다음과 같아야 합니다.
 
-  ```
-  dataset
-  ├── LJSpeech
-      ├── wavs
-          ├── LJ001-0001.wav (name doesn't matter)
-          ├── LJ001-0002.wav
-          └── ...
-      ├── metadata.csv
-      └── README
-  ├── kss
-      ├── 1
-          ├── 1_0000.wav (name doesn't matter)
-          ├── 1_0001.wav
-          └── ...
-      ├── 2
-      ├── 2
-      ├── 2
-      ├── transcript.txt
-      └── transcript.v.1.1.txt
-  ├── tfrecord
-  ├── VCTK
-      ├── VCTK-Corpus
-          ├── txt
-              ├── p225
-                  ├── p225_001.txt (name doesn't matter)
-                  ├── p226_002.txt
-                  └── ...
-              ├── p226
-              └── ...
-          ├── wav
-              ├── p225
-                  ├── p225_001.wav (name doesn't matter)
-                  ├── p226_002.wav
-                  └── ...
-              ├── p226
-              └── ...
-          ├── COPYING
-          ├── NOTE
-          ├── README
-          └── speaker-info.txt
-      ├── license_text
-      └── README.txt
-  └── ...
-  ```
+   ```
+   dataset
+   ├── LJSpeech
+       ├── wavs
+           ├── LJ001-0001.wav (name doesn't matter)
+           ├── LJ001-0002.wav
+           └── ...
+       ├── metadata.csv
+       └── README
+   ├── kss
+       ├── 1
+           ├── 1_0000.wav (name doesn't matter)
+           ├── 1_0001.wav
+           └── ...
+       ├── 2
+       ├── 2
+       ├── 2
+       ├── transcript.txt
+       └── transcript.v.1.1.txt
+   ├── tfrecord
+   ├── VCTK
+       ├── VCTK-Corpus
+           ├── txt
+               ├── p225
+                   ├── p225_001.txt (name doesn't matter)
+                   ├── p226_002.txt
+                   └── ...
+               ├── p226
+               └── ...
+           ├── wav
+               ├── p225
+                   ├── p225_001.wav (name doesn't matter)
+                   ├── p226_002.wav
+                   └── ...
+               ├── p226
+               └── ...
+           ├── COPYING
+           ├── NOTE
+           ├── README
+           └── speaker-info.txt
+       ├── license_text
+       └── README.txt
+   └── ...
+   ```
 
 3. `hyparams.py`의 스크립트에서 Training을 위한 데이터 세트 이름 및 각각의 Path들을 수정하여 줍니다.
 
