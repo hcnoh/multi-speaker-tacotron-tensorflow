@@ -79,19 +79,19 @@ Multi-Speaker 기능을 가진 Tacotron 모델의 TensorFlow 구현입니다. �
 
 3. `hyparams.py`의 스크립트에서 Training을 위한 데이터 세트 이름 및 각각의 Path들을 수정하여 줍니다.
 
-  `dataset_paths`같은 경우는 LJ Speech와 kss의 경우 `LJSpeech` 및 `kss` 디렉토리까지 명시해줘야 하며, VCTK 같은 경우는 `VCTK-Corpus` 디렉토리까지 명시해줘야 합니다.
+   `dataset_paths`같은 경우는 LJ Speech와 kss의 경우 `LJSpeech` 및 `kss` 디렉토리까지 명시해줘야 하며, VCTK 같은 경우는 `VCTK-Corpus` 디렉토리까지 명시해줘야 합니다.
 
 4. 데이터 세트 전처리를 수행합니다.
 
-  ```bash
-  >>> python preprocess.py
-  ```
+   ```bash
+   >>> python preprocess.py
+   ```
 
 5. 모델 Training을 수행합니다.
 
-  ```bash
-  >>> python train.py
-  ```
+   ```bash
+   >>> python train.py
+   ```
 
 ## Generating
 학습된 모델을 이용하여 음성을 생성하기 위해서는 `generate.py`를 실행하면 됩니다. `hyparams.py`의 `for generating` 부분을 원하는 경로로 바꿔주고 바로 실행하면 됩니다. Multi-Speaker 기능 사용 여부에 따라서 실행 방식이 달라질 것이지만 사용하는데 어려움이 없을 것입니다.
