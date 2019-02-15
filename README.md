@@ -1,7 +1,7 @@
 # Multi-Speaker Tacotron Implementation in TensorFlow
 Multi-Speaker 기능을 가진 Tacotron 모델의 TensorFlow 구현입니다. 이 저장소는 Baidu의 Deep Voice 2 논문을 기반으로 구현하였습니다. Multi-Speaker 기능은 선택적으로 사용, 또는 사용하지 않을 수 있으며 만약 Multi-Speaker 기능을 사용하지 않는다면 기존의 Tacotron 모델과 동일합니다.
 
-## Installing Dependencies
+### Installing Dependencies
 
 1. 파이썬 3.5 버전을 설치합니다.
 
