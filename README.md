@@ -103,19 +103,25 @@ $ python generate.py
 ## Results
 106000 Steps:
 - [Generated Audio Samples](https://soundcloud.com/artzizou/sets/multi-speaker-tacotron-tensorflow-106000-steps)
+
 - Mel Spectrogram Sample
 ![](/assets/README/README_2019-06-12-12-45-41.png)
+
 - Linear Spectrogram Sample
 ![](/assets/README/README_2019-06-12-12-46-48.png)
+
 - Attention Alignment Sample
 ![](/assets/README/README_2019-06-12-12-47-12.png)
 
 382000 Steps:
 - [Generated Audio Samples](https://soundcloud.com/artzizou/sets/multi-speaker-tacotron-tensorflow-382000-steps )
+
 - Mel Spectrogram Sample
 ![](/assets/README/README_2019-06-12-12-48-51.png)
+
 - Linear Spectrogram Sample
 ![](/assets/README/README_2019-06-12-12-49-07.png)
+
 - Attention Alignment Sample
 ![](/assets/README/README_2019-06-12-12-49-18.png)
 
